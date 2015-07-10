@@ -1,9 +1,11 @@
 #Dates-Validator
+##Reformats in-putted dates
 
-Reformats inputted dates
+Compile the program with your favourite compiler: e.g. gcc ./dates.c  
+Use the compiled program: [program] < good-dates.txt  
+To use the bad-dates use: [program] < bad-dates.txt  
 
-Compile the program with your favorite compiler: e.g. gcc ./dates.c
-
-Use the compiled program: ./a.out < good-dates.txt
-
-To use the bad-dates use: ./a.out < bad-dates.txt
+Or run the compiled program and input some dates eg:  
+"1/2/99"  
+"01/Feb/1999"  
+"1-01-00"  

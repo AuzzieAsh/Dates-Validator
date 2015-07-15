@@ -64,9 +64,9 @@ char *get_sub_string (char *string, int position, int length) {
 
 int check (char *date) {
 	
-	if (strcmp("q", date) == 0 || strcmp("Q", date) == 0) {
-		exit(0);
-	}
+    if (strcmp("q", date) == 0 || strcmp("Q", date) == 0) {
+        exit(0);
+    }
 	
    int length_date = strlen(date);
    int letter;

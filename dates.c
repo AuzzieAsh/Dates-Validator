@@ -2,7 +2,7 @@
     File: dates.c
     Author: Ashley Manson
  
-    Reformats inputted dates to a standard form.
+    Reformats input dates to a standard form.
  */
 
 #include <stdio.h>
@@ -12,7 +12,7 @@
 
 typedef enum {false, true} bool;
 
-/* Test if a char is seperator or not */
+/* Test if a char is separator or not */
 bool is_sep (char sep) {
    if (isalpha(sep) || isdigit(sep)) {
       return false;
@@ -63,7 +63,11 @@ char *get_sub_string (char *string, int position, int length) {
 }
 
 int check (char *date) {
-
+	
+	if (strcmp("q", date) == 0 || strcmp("Q", date) == 0) {
+		exit(0);
+	}
+	
    int length_date = strlen(date);
    int letter;
 
@@ -90,7 +94,7 @@ int check (char *date) {
 
    while (!sep_passed) {
       if (letter >= length_date) {
-         printf("%s - First seperator not found.\n", date);
+         printf("%s - First separator not found.\n", date);
          return -1;
       }
       first_sep = date[letter++];
@@ -105,7 +109,7 @@ int check (char *date) {
 
    while (!sep_passed) {
       if (letter >= length_date) {
-         printf("%s - Second seperator not found.\n", date);
+         printf("%s - Second separator not found.\n", date);
          return -1;
       }
       sec_sep = date[letter++];
@@ -116,7 +120,7 @@ int check (char *date) {
    }
 	
    if (first_sep != sec_sep) {
-      printf("%s - Seperators do not match.\n", date);
+      printf("%s - Separators do not match.\n", date);
       return -1;
    }
    	

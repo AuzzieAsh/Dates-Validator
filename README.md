@@ -1,7 +1,7 @@
 #Dates-Validator
-##Reformats in-putted dates
+##Reformats input dates
 
-Compile the program with your favourite compiler: e.g. gcc ./dates.c  
+Compile the program with "make"
 Use the compiled program: [program] < good-dates.txt  
 To use the bad-dates use: [program] < bad-dates.txt  
 
